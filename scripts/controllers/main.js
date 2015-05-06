@@ -1,10 +1,12 @@
 'use strict';
 
-angular.module('chattyApp')
-  .controller('MainCtrl', function ($scope) {
+var app = angular.module('chattyApp');
+
+app.controller('MainCtrl', function ($scope) {
+
     $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+        'HTML5 Boilerplate',
+        'AngularJS',
+        'Karma'
     ];
-  });
+});

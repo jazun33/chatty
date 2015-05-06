@@ -1,6 +1,11 @@
 'use strict';
 
-angular.module('chattyApp')
-  .controller('MessageCtrl', function ($scope) {
-    $scope.messages = [];
-  });
+var app = angular.module('chattyApp');
+
+app.controller('MessageCtrl', function ($scope, MessageService) {
+
+    MessageService.getMessages().then(function (response) {
+            $scope.messages = response.data;
+        });
+
+});
